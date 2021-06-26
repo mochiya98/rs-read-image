@@ -1,0 +1,38 @@
+{
+  "name": "@mochiya98/rs-read-image",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "browser": "wasm/browser.js",
+  "scripts": {
+    "browser-test": "npm --prefix wasm-browser-test run start",
+    "test": "run-s test:*",
+    "test:napi": "npm run build:napi:for-test && npm --prefix napi run test",
+    "test:wasm": "run-s test:wasm:*",
+    "test:wasm:node": "wasm-pack test wasm --node",
+    "build:napi:for-test": "napi build --cargo-cwd napi napi",
+    "build:napi:win32-ia32": "napi build --platform --cargo-cwd napi --target i686-pc-windows-msvc packages/win32-ia32",
+    "build:napi:win32-x64": "napi build --platform --cargo-cwd napi --target x86_64-pc-windows-msvc packages/win32-x64",
+    "build:napi:linux-ia32": "napi build --platform --cargo-cwd napi --target i686-unknown-linux-gnu packages/linux-ia32",
+    "build:napi:linux-x64": "napi build --platform --cargo-cwd napi --target x86_64-unknown-linux-gnu packages/linux-x64",
+    "build:napi:darwin-x64": "napi build --platform --cargo-cwd napi --target x86_64-apple-darwin packages/darwin-x64",
+    "build:napi:darwin-arm64": "napi build --platform --cargo-cwd napi --target aarch64-apple-darwin packages/darwin-arm64",
+    "build:wasm": "run-s build:wasm:*",
+    "build:wasm:browser": "wasm-pack build wasm --release --target bundler --out-dir dist/browser",
+    "build:wasm:node": "wasm-pack build wasm --release --target nodejs --out-dir dist/node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "optionalDependencies": {
+    "@mochiya98/rs-read-image-darwin-arm64": "0.0.0",
+    "@mochiya98/rs-read-image-darwin-x64": "0.0.0",
+    "@mochiya98/rs-read-image-linux-ia32": "0.0.0",
+    "@mochiya98/rs-read-image-linux-x64": "0.0.0",
+    "@mochiya98/rs-read-image-win32-ia32": "0.0.0",
+    "@mochiya98/rs-read-image-win32-x64": "0.0.0"
+  }
+}

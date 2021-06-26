@@ -1,0 +1,16 @@
+[package]
+authors = ["Yukimasa Funaoka <yukimasafunaoka@gmail.com>"]
+name = "read_image_lib"
+version = "0.1.0"
+edition = "2018"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/mochiya98/rs-read-image"
+
+[lib]
+crate-type = ["rlib"]
+
+[profile.release]
+lto = true
+
+[dependencies]
+image = "0.23.14"

@@ -1,0 +1,24 @@
+{
+  "name": "rs_read_image_napi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.node",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha --require @swc-node/register --watch-extensions ts,tsx \"test/**/*.test.{ts,tsx,js,jsx}\" \"src/**/*.test.{ts,tsx,js,jsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc-node/core": "^1.5.1",
+    "@swc-node/register": "^1.3.2",
+    "@types/chai": "^4.2.19",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.12.4",
+    "chai": "^4.3.4",
+    "jimp": "^0.16.1",
+    "mocha": "^9.0.1",
+    "typescript": "^4.3.4"
+  }
+}

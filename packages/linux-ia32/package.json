@@ -1,0 +1,18 @@
+{
+  "name": "@mochiya98/rs-read-image-linux-ia32",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "ia32"
+  ],
+  "main": "index.linux-ia32.node",
+  "files": [
+    "index.linux-ia32.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
